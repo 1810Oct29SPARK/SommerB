@@ -1,0 +1,49 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formal Ties</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/formalTies.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marck Script">
+</head>
+<body>
+    <!-- <img id="logo-image" src="images/formalTies.jpg" alt="Formal Suit with Tie"> -->
+    <nav>
+        <a href="formalTies.html" class="logo"><Span style="font-family: 'Marck Script', serif;">FT </Span> Formal Ties</a>
+        <div class="nav-right">
+            <a href="formalTies.html">Home</a>
+            <a href="formalTiesTypes.html">Types</a>    
+            <a href="formalTiesKnots.html">Knots</a>
+            <a href="formalTiesHistory.html">History</a>
+            <a href="formalTiesFacts.html">Facts</a>
+            <a href="formalTiesOccasions.html">Occasions</a>
+            <a class="active" href="formalTiesCleaning.html">Cleaning</a>
+            <a href="formalTiesBuy.html">Buy</a>
+        </div>
+    </nav>
+    <header><img class="headerImage" src="images/tieHeaderKnots.jpg"> </header>
+      <div style="padding-left:20px">
+        <h1>Where to Clean Your Ties</h1>
+      </div>
+      <!--The div element for the map -->
+      <div id="map"></div>
+      <button id="cleanerButton">Click to find nearby Dry Cleaners</button>
+      <div id="cleanerResults"></div>        
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn_MTrjdXknXWZiK57Tr_vzcmLyjcxESs&callback=initMap">
+      </script>
+
+      <br>
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="javascript/formalTies.js"></script>
+
+    
+</body>
+</html>
