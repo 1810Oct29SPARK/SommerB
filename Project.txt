@@ -1,0 +1,9 @@
+Theme: Ties
+7 Use Cases:
+1: History of Ties.
+2: How to tie different knots.
+3: Facts about ties.
+4: Different types of ties.
+5: Tie color appropriate for events/occasions.
+6: Where to clean your ties.
+7: Where to buy ties.
