@@ -1,0 +1,15 @@
+a {
+    color: #fcd600e1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px;
+    font-size: 17px;
+
+}
+
+a:hover {
+    color: #f3d738;
+}
+
+th {
+    border-radius: 40px;
+}
