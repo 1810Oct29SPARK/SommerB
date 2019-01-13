@@ -4,12 +4,16 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.revature.dao.EmployeesDao;
+import com.revature.dao.EmployeesDaoImpl;
 import com.revature.util.ConnectionUtil;
 
 public class Driver {
 
 	public static void main(String[] args) {
-		init();
+//		init();
+		EmployeesDao ed = new EmployeesDaoImpl(); 
+		System.out.println(ed.loginEmployees("Laney", "dzcYSy2"));
 	}
 
 	static void init() {

@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.revature.beans.Employees;
 import com.revature.dao.EmployeesDao;
+import com.revature.dao.EmployeesDaoImpl;
 
 public class EmployeesServiceImpl implements EmployeesService{
 	
@@ -14,13 +15,13 @@ public class EmployeesServiceImpl implements EmployeesService{
 	}
 
 	@Override
-	public List<Employees> getEmployeess() {
+	public List<Employees> getEmployees() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Employees> getEmployeessByBossId(int id) {
+	public List<Employees> getEmployeesByBossId(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -45,8 +46,8 @@ public class EmployeesServiceImpl implements EmployeesService{
 
 	@Override
 	public Employees loginEmployees(String user, String pass) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return ed.loginEmployees(user, pass);
 	}
 
 }

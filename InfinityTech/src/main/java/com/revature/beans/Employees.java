@@ -5,19 +5,22 @@ public class Employees {
 	private String firstName;
 	private String lastName;
 	private String email;
+	private String password;
 	private String isBoss;
 	private int bossId;
+	
 	@Override
 	public String toString() {
 		return "Employees [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", isBoss=" + isBoss + ", bossId=" + bossId + "]";
+				+ ", password=" + password + ", isBoss=" + isBoss + ", bossId=" + bossId + "]";
 	}
-	public Employees(int id, String firstName, String lastName, String email, String isBoss, int bossId) {
+	public Employees(int id, String firstName, String lastName, String email, String password, String isBoss, int bossId) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.password = password;
 		this.isBoss = isBoss;
 		this.bossId = bossId;
 	}
@@ -73,6 +76,12 @@ public class Employees {
 		} else if (!lastName.equals(other.lastName))
 			return false;
 		return true;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getFirstName() {
 		return firstName;

@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import com.revature.beans.Employees;
 import com.revature.service.EmployeesService;
 import com.revature.service.EmployeesServiceImpl;
@@ -20,10 +21,10 @@ public class LoginServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private EmployeeService employeeService;
+	private EmployeesService employeesService;
 	
 	public LoginServlet() {
-		employeeService = new EmployeeServiceImpl();
+		employeesService = new EmployeesServiceImpl();
 	}
 
 	// return Login page for GET request
@@ -43,24 +44,25 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		resp.setContentType("text/html");
 		// grab params from request
-		String user = req.getParameter("username");
+		String user = req.getParameter("firstname");
 		String pass = req.getParameter("password");
-//		System.out.println(req.getParameter("username"));
+//		System.out.println(req.getParameter("firstname"));
 //		System.out.println(req.getParameter("password"));
 		// attempting to authenticate employee
-		Employee e = employeeService.loginEmployee(user, pass);
+		Employees e = employeesService.loginEmployees(user, pass);
 		// set use information as session attributes
 		if (e != null) {
 			session.setAttribute("userId", e.getId());
-			session.setAttribute("username", e.getName());
+			session.setAttribute("firstname", e.getFirstName());
+			session.setAttribute("lastname", e.getLastName());
 			session.setAttribute("email", e.getEmail());
-			session.setAttribute("password", e.getPw());
-			session.setAttribute("manager", e.getBoss());
+			session.setAttribute("password", e.getPassword());
+			session.setAttribute("manager", e.getIsBoss());
 			session.setAttribute("boss", e.getBossId());
 			session.setAttribute("problem", null);
 			// redirect user to profile page if authenticated
 			// if employee is a boss, redirect to manager page
-			if (e.getBoss().equals("Y")) {
+			if (e.getIsBoss().equals("true")) {
 				resp.sendRedirect("managerHome.html");
 			} else {
 				// if not, default to employee page

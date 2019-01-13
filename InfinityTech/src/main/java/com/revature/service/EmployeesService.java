@@ -8,9 +8,9 @@ public interface EmployeesService {
 
 	public Employees getEmployeesById(int id);
 
-	public List<Employees> getEmployeess();
+	public List<Employees> getEmployees();
 
-	public List<Employees> getEmployeessByBossId(int id);
+	public List<Employees> getEmployeesByBossId(int id);
 
 	public void createEmployees(Employees e);
 

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+<link rel="stylesheet" href="style/myCoolStyles.css">
+<title>Employee Home</title>
+</head>
+<body class="container" style="height: 100vh;"
+    background="https://background-tiles.com/overview/green/patterns/small/1014.png">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Employee Page</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Employee
+                        Information</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Expense
+                        Reimbursement Request</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4">Employee Information</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <p id="userId"></p>
+        <br>
+        <p id="username"></p>
+        <br>
+        <p id="email"></p>
+        <br>
+        <p id="password"></p>
+        <br> <a class="btn btn-primary btn-lg" role="button"
+            type="submit">Update</a>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Expense Reimbursement Request</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <form action="accounts" method="POST">
+            <!-- div class="form-group">
+                <label for="formGroupExampleInput">ID</label> <input type="number"
+                    class="form-control" name="accId" value="null" placeholder="XXX"
+                    readonly>
+            </div> -->
+            <div class="form-group">
+                <label for="formGroupExampleInput">Amount</label> <input
+                    type="number" class="form-control" name="amount" placeholder="$000">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Employee ID #</label> <input
+                    type="number" class="form-control" name="eId" placeholder="XX">
+            </div>
+            <!-- div class="form-group">
+                <label for="formGroupExampleInput2">Photo</label> <input type="text"
+                    class="form-control" name="photo" value="null"
+                    placeholder="*under construction*" readonly>
+            </div> -->
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Description</label> <input
+                    type="text" class="form-control" name="descrip"
+                    placeholder="describe your purchase here">
+            </div>
+            <!-- div class="form-group">
+    <label for="formGroupExampleInput2">Status</label>
+    <input type="text" class="form-control" name="status" value="PENDING" placeholder="PENDING" readonly>
+  </div> -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Pending Requests</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <input id="pendingInput" type="text" placeholder="Enter your ID #">
+        <button id="pendingButton" type="button">Search</button>
+        <ul id="pending"></ul>
+    </div>
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">Resolved Requests</h1>
+        <p class="lead"></p>
+        <hr class="my-4">
+        <input id="resolvedInput" type="text" placeholder="Enter your ID #">
+        <button id="resolvedButton" type="button">Search</button>
+        <ul id="resolved"></ul>
+    </div>
+    <br>
+    <form action="logout" method="GET">
+        <input type="submit" value="logout">
+    </form>
+    <script src="script/check.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
