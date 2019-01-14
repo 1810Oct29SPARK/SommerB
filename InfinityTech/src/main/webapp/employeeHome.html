@@ -51,11 +51,6 @@
         <p class="lead"></p>
         <hr class="my-4">
         <form action="accounts" method="POST">
-            <!-- div class="form-group">
-                <label for="formGroupExampleInput">ID</label> <input type="number"
-                    class="form-control" name="accId" value="null" placeholder="XXX"
-                    readonly>
-            </div> -->
             <div class="form-group">
                 <label for="formGroupExampleInput">Amount</label> <input
                     type="number" class="form-control" name="amount" placeholder="$000">
@@ -64,40 +59,14 @@
                 <label for="formGroupExampleInput2">Employee ID #</label> <input
                     type="number" class="form-control" name="eId" placeholder="XX">
             </div>
-            <!-- div class="form-group">
-                <label for="formGroupExampleInput2">Photo</label> <input type="text"
-                    class="form-control" name="photo" value="null"
-                    placeholder="*under construction*" readonly>
-            </div> -->
             <div class="form-group">
                 <label for="formGroupExampleInput2">Description</label> <input
                     type="text" class="form-control" name="descrip"
                     placeholder="describe your purchase here">
             </div>
-            <!-- div class="form-group">
-    <label for="formGroupExampleInput2">Status</label>
-    <input type="text" class="form-control" name="status" value="PENDING" placeholder="PENDING" readonly>
-  </div> -->
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <br>
-    </div>
-    <div class="jumbotron">
-        <h1 class="display-4">Pending Requests</h1>
-        <p class="lead"></p>
-        <hr class="my-4">
-        <input id="pendingInput" type="text" placeholder="Enter your ID #">
-        <button id="pendingButton" type="button">Search</button>
-        <ul id="pending"></ul>
-    </div>
-    <br>
-    <div class="jumbotron">
-        <h1 class="display-4">Resolved Requests</h1>
-        <p class="lead"></p>
-        <hr class="my-4">
-        <input id="resolvedInput" type="text" placeholder="Enter your ID #">
-        <button id="resolvedButton" type="button">Search</button>
-        <ul id="resolved"></ul>
     </div>
     <br>
     <form action="logout" method="GET">

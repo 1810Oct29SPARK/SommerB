@@ -35,23 +35,17 @@ public class EmployeeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// check whether the URI was "bear" or "bears"
 		// note: if we had more than 2 choices, we should A B S O L U T E L Y use a
-		// front controller pattern or some sort of helper class
-//		response.getWriter().write("ayyylmao");
-//		response.getWriter().write(request.getRequestURI());
+		// front controller pattern or some sort of helper class;
 		switch (request.getRequestURI()) {
-		case "/project-one/employee":
-//			response.getWriter().write("ayyylmao");
+		case "/InfinityTech/employee":
 			int id = Integer.parseInt(request.getParameter("id"));
 			response.getWriter().write(om.writeValueAsString(employeesService.getEmployeesById(id)));
 			break;
-		case "/project-one/employees":
-//			response.getWriter().write("lmaoayyy");
+		case "/InfinityTech/employees":
 			response.getWriter().write(om.writeValueAsString(employeesService.getEmployees()));
 			break;
-		case "/project-one/employeesByBoss":
-//			response.getWriter().write("lmaoayyy");
+		case "/InfinityTech/employeesByBoss":
 			int bId = Integer.parseInt(request.getParameter("id"));
 			response.getWriter().write(om.writeValueAsString(employeesService.getEmployeesById(bId)));
 			break;
@@ -64,7 +58,7 @@ public class EmployeeServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-//		System.out.println(om.readValue(request.getReader(), Employee.class));
+//		System.out.println(om.readValue(request.getReader(), Employees.class));
 		employeesService.createEmployees(om.readValue(request.getReader(), Employees.class));
 	}
 

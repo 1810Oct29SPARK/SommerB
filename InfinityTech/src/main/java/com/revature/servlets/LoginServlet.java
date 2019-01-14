@@ -44,21 +44,21 @@ public class LoginServlet extends HttpServlet {
 		HttpSession session = req.getSession();
 		resp.setContentType("text/html");
 		// grab params from request
-		String user = req.getParameter("firstname");
+		String user = req.getParameter("firstName");
 		String pass = req.getParameter("password");
-//		System.out.println(req.getParameter("firstname"));
+//		System.out.println(req.getParameter("firstName"));
 //		System.out.println(req.getParameter("password"));
 		// attempting to authenticate employee
 		Employees e = employeesService.loginEmployees(user, pass);
 		// set use information as session attributes
 		if (e != null) {
-			session.setAttribute("userId", e.getId());
-			session.setAttribute("firstname", e.getFirstName());
-			session.setAttribute("lastname", e.getLastName());
+			session.setAttribute("id", e.getId());
+			session.setAttribute("firstName", e.getFirstName());
+			session.setAttribute("lastName", e.getLastName());
 			session.setAttribute("email", e.getEmail());
 			session.setAttribute("password", e.getPassword());
-			session.setAttribute("manager", e.getIsBoss());
-			session.setAttribute("boss", e.getBossId());
+			session.setAttribute("isBoss", e.getIsBoss());
+			session.setAttribute("bossId", e.getBossId());
 			session.setAttribute("problem", null);
 			// redirect user to profile page if authenticated
 			// if employee is a boss, redirect to manager page

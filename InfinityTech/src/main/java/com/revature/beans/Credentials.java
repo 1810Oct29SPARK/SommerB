@@ -2,22 +2,22 @@ package com.revature.beans;
 
 public class Credentials {
 
-	private String username;
+	private String firstname;
 	private String password;
 	
 	public Credentials() {
 	}
 	
-	public Credentials(String username, String password) {
+	public Credentials(String firstname, String password) {
 		super();
-		this.username = username;
+		this.firstname = firstname;
 		this.password = password;
 	}
-	public String getUsername() {
-		return username;
+	public String getfirstname() {
+		return firstname;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setfirstname(String firstname) {
+		this.firstname = firstname;
 	}
 	public String getPassword() {
 		return password;
@@ -30,7 +30,7 @@ public class Credentials {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
+		result = prime * result + ((firstname == null) ? 0 : firstname.hashCode());
 		return result;
 	}
 	@Override
@@ -47,16 +47,16 @@ public class Credentials {
 				return false;
 		} else if (!password.equals(other.password))
 			return false;
-		if (username == null) {
-			if (other.username != null)
+		if (firstname == null) {
+			if (other.firstname != null)
 				return false;
-		} else if (!username.equals(other.username))
+		} else if (!firstname.equals(other.firstname))
 			return false;
 		return true;
 	}
 	@Override
 	public String toString() {
-		return "Credentials [username=" + username + ", password=" + password + "]";
+		return "Credentials [firstname=" + firstname + ", password=" + password + "]";
 	}
 	
 }

@@ -26,15 +26,15 @@ public class SessionServlet extends HttpServlet {
 		// grab current session, if it exists
 		response.setContentType("application/json");
 		HttpSession session = request.getSession(false);
-		if (session != null && session.getAttribute("username") != null) {
+		if (session != null && session.getAttribute("firstName") != null) {
 			try {
-				int userId = Integer.parseInt(session.getAttribute("userId").toString());
-				String firstname = session.getAttribute("firstname").toString();
-				String lastname = session.getAttribute("lastname").toString();
+				int userId = Integer.parseInt(session.getAttribute("id").toString());
+				String firstname = session.getAttribute("firstName").toString();
+				String lastname = session.getAttribute("lastName").toString();
 				String email = session.getAttribute("email").toString();
 				String password = session.getAttribute("password").toString();
-				String manager = session.getAttribute("manager").toString();
-				int boss = Integer.parseInt(session.getAttribute("boss").toString());
+				String manager = session.getAttribute("isBoss").toString();
+				int boss = Integer.parseInt(session.getAttribute("bossId").toString());
 				Employees e = new Employees(userId, firstname, lastname, email, password, manager, boss);
 				response.getWriter().write((new ObjectMapper()).writeValueAsString(e));
 			} catch (Exception e) {

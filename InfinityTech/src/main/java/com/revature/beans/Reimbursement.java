@@ -66,8 +66,8 @@ public class Reimbursement {
 	public int getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
-		this.amount = amount;
+	public void setAmount(double d) {
+		this.amount = d;
 	}
 	public String getDescription() {
 		return description;

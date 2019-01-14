@@ -10,38 +10,32 @@ public class EmployeesServiceImpl implements EmployeesService{
 	private EmployeesDao ed = new EmployeesDaoImpl();
 	@Override
 	public Employees getEmployeesById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return ed.getEmployeesById(id);
 	}
 
 	@Override
 	public List<Employees> getEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+		return ed.getEmployeess();
 	}
 
 	@Override
 	public List<Employees> getEmployeesByBossId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return ed.getEmployeessByBossId(id);
 	}
 
 	@Override
 	public void createEmployees(Employees e) {
-		// TODO Auto-generated method stub
-		
+		ed.createEmployees(e);
 	}
 
 	@Override
 	public void updateEmployees(Employees e) {
-		// TODO Auto-generated method stub
-		
+		ed.updateEmployees(e);
 	}
 
 	@Override
 	public void deleteEmployees(Employees e) {
-		// TODO Auto-generated method stub
-		
+		ed.deleteEmployees(e);
 	}
 
 	@Override

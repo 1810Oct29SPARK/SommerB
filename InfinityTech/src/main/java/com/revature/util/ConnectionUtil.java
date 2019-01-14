@@ -12,8 +12,8 @@ public class ConnectionUtil {
 	
 	public static Connection getConnection(String fileName) throws SQLException, IOException{
 		Properties prop = new Properties();
-//		InputStream in = new FileInputStream(fileName);
-//		prop.load(in);
+		InputStream in = new FileInputStream(fileName);
+		prop.load(in);
 		
 		return DriverManager.getConnection(prop.getProperty("url"), prop.getProperty("username"), prop.getProperty("password"));
 	}
