@@ -19,6 +19,9 @@ public class Reimbursement {
 		this.status = status;
 		this.eId = eId;
 	}
+	public Reimbursement() {
+		
+	}
 	public int getId() {
 		return id;
 	}
@@ -66,7 +69,7 @@ public class Reimbursement {
 	public int getAmount() {
 		return amount;
 	}
-	public void setAmount(double d) {
+	public void setAmount(int d) {
 		this.amount = d;
 	}
 	public String getDescription() {

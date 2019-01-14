@@ -37,12 +37,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>AccountServlet</display-name>
-    <servlet-name>AccountServlet</servlet-name>
-    <servlet-class>com.revature.servlets.AccountServlet</servlet-class>
+    <display-name>ReimbursementServlet</display-name>
+    <servlet-name>ReimbursementServlet</servlet-name>
+    <servlet-class>com.revature.servlets.ReimbursementServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>AccountServlet</servlet-name>
-    <url-pattern>/account</url-pattern>
+    <servlet-name>ReimbursementServlet</servlet-name>
+    <url-pattern>/reimbursement</url-pattern>
   </servlet-mapping>
 </web-app>

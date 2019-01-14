@@ -19,11 +19,11 @@ public class ReimbursementDaoImpl implements ReimbursementDao{
 	@Override
 	public void createRequest(Reimbursement a) {
 		try(Connection con = ConnectionUtil.getConnection(filename)){
-			String sql = "INSERT INTO REIMBURSMENT(AMOUNT, DESCRIPTION, EID) VALUES(?,?,?)";
+			String sql = "INSERT INTO REIMBURSMENT(ID, AMOUNT, DESCRIPTION) VALUES(?,?,?)";
 			PreparedStatement p = con.prepareStatement(sql);
-			p.setInt(1,a.getAmount());
-			p.setString(2, a.getDescription());
-			p.setInt(3, a.geteId());
+			p.setInt(1,a.getId());
+			p.setInt(2, a.getAmount());
+			p.setString(3, a.getDescription());
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}catch(IOException e) {
