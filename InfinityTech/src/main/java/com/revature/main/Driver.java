@@ -6,6 +6,8 @@ import java.sql.SQLException;
 
 import com.revature.dao.EmployeesDao;
 import com.revature.dao.EmployeesDaoImpl;
+import com.revature.service.EmployeesService;
+import com.revature.service.EmployeesServiceImpl;
 import com.revature.util.ConnectionUtil;
 
 public class Driver {
@@ -13,7 +15,10 @@ public class Driver {
 	public static void main(String[] args) {
 //		init();
 		EmployeesDao ed = new EmployeesDaoImpl(); 
-		System.out.println(ed.loginEmployees("Laney", "dzcYSy2"));
+		EmployeesService es = new EmployeesServiceImpl();
+//		System.out.println(ed.loginEmployees("Laney", "dzcYSy2"));
+		System.out.println(es.loginEmployees("Laney", "dzcYSy2"));
+		
 	}
 
 	static void init() {

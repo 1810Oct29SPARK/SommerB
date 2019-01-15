@@ -34,15 +34,14 @@
         <h1 class="display-4">Employee Information</h1>
         <p class="lead"></p>
         <hr class="my-4">
-        <p id="userId"></p>
+        <p id="id"></p>
         <br>
-        <p id="username"></p>
+        <p id="firstname"></p>
+        <br>
+        <p id="lastname"></p>
         <br>
         <p id="email"></p>
         <br>
-        <p id="password"></p>
-        <br> <a class="btn btn-primary btn-lg" role="button"
-            type="submit">Update</a>
     </div>
     <div class="jumbotron">
         <h1 class="display-4">Expense Reimbursement Request</h1>
@@ -50,12 +49,12 @@
         <hr class="my-4">
         <form action="accounts" method="POST">
             <div class="form-group">
-                <label for="formGroupExampleInput">Amount</label> <input
-                    type="number" class="form-control" name="amount" placeholder="$000">
+                <label for="formGroupExampleInput">Employee ID #</label> <input
+                    type="number" class="form-control" name="id" placeholder="XX">
             </div>
             <div class="form-group">
-                <label for="formGroupExampleInput2">Employee ID #</label> <input
-                    type="number" class="form-control" name="eId" placeholder="XX">
+                <label for="formGroupExampleInput2">Amount</label> <input
+                    type="number" class="form-control" name="amount" placeholder="$$$">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Description</label> <input

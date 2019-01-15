@@ -41,28 +41,8 @@ public class ReimbursementDaoImpl implements ReimbursementDao{
 
 	@Override
 	public List<Reimbursement> getReimbursementById(int id) {
-		List<Reimbursement> ac = new ArrayList<>();
-
-		try (Connection con = ConnectionUtil.getConnection(filename)) {
-			String sql = "SELECT * FROM ACCOUNTS WHERE E_ID = ?";
-			PreparedStatement p = con.prepareStatement(sql);
-			p.setInt(1, id);
-			ResultSet rs = p.executeQuery();
-			while (rs.next()) {
-				int aId = rs.getInt("A_ID");
-				int eId = rs.getInt("E_ID");
-				int amount = rs.getInt("AMOUNT");
-				Blob photo = rs.getBlob("PHOTO");
-				String descrip = rs.getString("DESCRIPTIONS");
-				String status = rs.getString("STATUS");
-				ac.add(new Reimbursement(id, amount, descrip, status, eId));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return ac;
+		return null;
+		
 	}
 
 	@Override

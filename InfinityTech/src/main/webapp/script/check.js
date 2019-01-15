@@ -25,6 +25,7 @@ function populateUser(){
         } else {
             // define behavior for user returned
             employee = data;
+            document.getElementById("id").innerText = "Employee ID: " + employee.id;
             document.getElementById("firstname").innerText = "First Name: " + employee.firstname;
             document.getElementById("lastname").innerText = "Last Name: " + employee.lastname;
             document.getElementById("email").innerText = "Email: " + employee.email;
